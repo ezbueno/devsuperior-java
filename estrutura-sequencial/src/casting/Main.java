@@ -5,7 +5,7 @@ public class Main {
 		int a = 5;
 		int b = 2;
 		double resultado = (double) a / b;
-		
+
 		System.out.println(resultado);
 	}
 }
