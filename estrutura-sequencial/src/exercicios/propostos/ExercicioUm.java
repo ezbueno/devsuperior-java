@@ -4,17 +4,17 @@ import java.util.Scanner;
 
 /**
  * @author Ezandro Bueno
- * Faça um programa para ler dois valores inteiros, e depois mostrar na tela a soma desses números com uma 
+ * FaÃ§a um programa para ler dois valores inteiros, e depois mostrar na tela a soma desses nÃºmeros com uma 
  * mensagem explicativa, conforme exemplos.
  * Entrada:
  * 10
  * 30
- * Saída:
+ * SaÃ­da:
  * SOMA = 40
  * Entrada:
  * -30
  * 10
- * Saída:
+ * SaÃ­da:
  * SOMA = -20
  * Entrada:
  * 0
