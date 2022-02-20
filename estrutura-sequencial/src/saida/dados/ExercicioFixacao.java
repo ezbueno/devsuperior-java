@@ -4,7 +4,7 @@ import java.util.Locale;
 
 /**
  * @author Ezandro Bueno 
- * Inicie as seguintes vari·veis:
+ * Inicie as seguintes vari√°veis:
  * String product1 = "Computer";
  * String product2 = "Office desk";
  * 
@@ -16,7 +16,7 @@ import java.util.Locale;
  * double price2 = 650.50;
  * double measure = 53.234567;
  * 
- * Em seguida, usando os valores das vari·veis, produza a seguinte saÌda na tela do console:
+ * Em seguida, usando os valores das vari√°veis, produza a seguinte sa√≠da na tela do console:
  * Products:
  * Computer, which price is $ 2100,00
  * Office desk, which price is $ 650,50
