@@ -15,7 +15,7 @@ import java.util.Scanner;
  * Entrada:
  * 25.00
  * Saída:
- * Intervalo (0,25]
+ * Intervalo [0,25]
  * Entrada:
  * 100.00
  * Saída:
