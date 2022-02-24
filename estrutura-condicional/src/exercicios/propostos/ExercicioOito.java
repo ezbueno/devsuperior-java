@@ -39,21 +39,24 @@ public class ExercicioOito {
 		try (Scanner sc = new Scanner(System.in)) {
 			double salario = sc.nextDouble();
 
-			double valorImposto = 0.0;
+			double valorImposto;
 
 			if (salario <= 2000.0) {
-				System.out.println("Isento");
+				valorImposto = 0.0;
 			} else if (salario <= 3000.0) {
 				salario -= 2000.0;
 				valorImposto = (0.08 * salario);
-				System.out.printf("R$ %.2f%n", valorImposto);
 			} else if (salario <= 4500.0) {
 				salario -= 3000.0;
 				valorImposto = (0.08 * 1000.0) + (0.18 * salario);
-				System.out.printf("R$ %.2f%n", valorImposto);
 			} else {
 				salario -= 4500.0;
 				valorImposto = (0.08 * 1000.0) + (0.18 * 1500.0) + (0.28 * salario);
+			}
+
+			if (valorImposto == 0.0) {
+				System.out.println("Isento");
+			} else {
 				System.out.printf("R$ %.2f%n", valorImposto);
 			}
 		}
