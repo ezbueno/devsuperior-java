@@ -1,4 +1,4 @@
-package exercicios.propostos;
+package estruturawhile.exercicios.propostos;
 
 import java.util.Scanner;
 
