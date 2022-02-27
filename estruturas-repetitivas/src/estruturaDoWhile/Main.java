@@ -1,4 +1,4 @@
-package estruturadowhile;
+package estruturaDoWhile;
 
 import java.util.Locale;
 import java.util.Scanner;
