@@ -5,6 +5,13 @@ import java.util.Scanner;
 /**
  * @author Ezandro Bueno
  * Ler um número inteiro N e calcular todos os seus divisores.
+ * Entrada:
+ * 6
+ * Saída:
+ * 1
+ * 2
+ * 3
+ * 6
  */
 public class ExercicioSeis {
 	public static void main(String[] args) {
