@@ -20,12 +20,12 @@ public class Main {
 		System.out.println("substring(2, 9): -" + s05 + "-");
 		System.out.println("replace('a', 'x'): -" + s06 + "-");
 		System.out.println("replace('abc', 'xy'): -" + s07 + "-");
-		
+
 		System.out.println();
-		
+
 		int i = original.indexOf("bc");
 		int j = original.lastIndexOf("bc");
-		
+
 		System.out.println("indexOf('bc'): " + i);
 		System.out.println("lastIndexOf('bc'): " + j);
 
