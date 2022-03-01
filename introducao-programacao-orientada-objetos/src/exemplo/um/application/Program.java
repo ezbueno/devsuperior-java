@@ -1,9 +1,9 @@
-package application;
+package exemplo.um.application;
 
 import java.util.Locale;
 import java.util.Scanner;
 
-import entities.Triangle;
+import exemplo.um.entities.Triangle;
 
 /**
  * @author Ezandro Bueno
