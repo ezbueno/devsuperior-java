@@ -1,4 +1,4 @@
-package exemplo.um.entities;
+package exemploum.entities;
 
 public class Triangle {
 	public double a;
