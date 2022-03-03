@@ -48,7 +48,10 @@ public class Program {
 			System.out.print("Quantity in stock: ");
 			int quantity = sc.nextInt();
 
-			Product prod = new Product(name, price, quantity);
+			Product prod = new Product();
+			prod.setName(name);
+			prod.setPrice(price);
+			prod.addProducts(quantity);
 
 			System.out.println("\nProduct data: " + prod);
 
