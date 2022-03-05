@@ -5,17 +5,14 @@ public class Account {
 	private String holder;
 	private double balance;
 
-	public Account() {
-	}
-
 	public Account(int number, String holder) {
 		this.number = number;
 		this.holder = holder;
 	}
 
-	public Account(int number, String holder, double balance) {
+	public Account(int number, String holder, double initialDeposit) {
 		this(number, holder);
-		this.balance = balance;
+		this.deposit(initialDeposit);
 	}
 
 	public String getHolder() {
@@ -34,17 +31,21 @@ public class Account {
 		return this.balance;
 	}
 
-	public void deposit(double value) {
-		this.balance += value;
+	public void deposit(double depositValue) {
+		this.balance += depositValue;
 	}
 
-	public void withdraw(double value) {
-		this.balance = this.balance - value - 5.0;
+	public void withdraw(double withdrawValue) {
+		this.balance -= withdrawValue + 5.0;
 	}
 
 	@Override
 	public String toString() {
-		return "Account " + this.number + ", Holder: " + this.holder + ", Balance: $ "
+		return "Account " 
+				+ this.number 
+				+ ", Holder: " 
+				+ this.holder 
+				+ ", Balance: $ "
 				+ String.format("%.2f", this.balance);
 	}
 }

@@ -73,30 +73,32 @@ public class Program {
 			String holder = sc.nextLine();
 
 			System.out.print("Is there an initial deposit (y/n)? ");
-			char choose = sc.next().charAt(0);
+			char response = sc.next().charAt(0);
 
-			if (choose == 'y') {
+			if (response == 'y') {
 				System.out.print("Enter initial deposit value: ");
-				double balance = sc.nextDouble();
-				account = new Account(number, holder, balance);
-
+				double initialDeposit = sc.nextDouble();
+				account = new Account(number, holder, initialDeposit);
 			} else {
 				account = new Account(number, holder);
 			}
 
-			System.out.println("\nAccount data:");
+			System.out.println();
+			System.out.println("Account data:");
 			System.out.println(account);
 
-			System.out.print("\nEnter a deposit value: ");
-			double value = sc.nextDouble();
-			account.deposit(value);
+			System.out.println();
+			System.out.print("Enter a deposit value: ");
+			double depositValue = sc.nextDouble();
+			account.deposit(depositValue);
 
 			System.out.println("Updated account data:");
 			System.out.println(account);
 
-			System.out.print("\nEnter a withdraw value: ");
-			value = sc.nextDouble();
-			account.withdraw(value);
+			System.out.println();
+			System.out.print("Enter a withdraw value: ");
+			double withdrawValue = sc.nextDouble();
+			account.withdraw(withdrawValue);
 
 			System.out.println("Updated account data:");
 			System.out.println(account);
