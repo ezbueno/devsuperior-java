@@ -1,4 +1,4 @@
-package arrays.exemplo;
+package arrays.exemplo.um;
 
 import java.util.Locale;
 import java.util.Scanner;
