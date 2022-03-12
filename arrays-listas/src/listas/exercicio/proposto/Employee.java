@@ -5,6 +5,9 @@ public class Employee {
 	private String name;
 	private Double salary;
 
+	public Employee() {
+	}
+	
 	public Employee(Integer id, String name, Double salary) {
 		this.id = id;
 		this.name = name;
@@ -28,11 +31,11 @@ public class Employee {
 	}
 	
 	public void increaseSalary(double percentage) {
-		//TODO
+		this.salary += this.salary * percentage / 100.0;
 	}
 
 	@Override
 	public String toString() {
-		return this.id + ", " + this.name + ", " + this.salary;
+		return this.id + ", " + this.name + ", " + String.format("%.2f", this.salary);
 	}
 }

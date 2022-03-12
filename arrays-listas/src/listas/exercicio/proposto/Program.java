@@ -1,5 +1,7 @@
 package listas.exercicio.proposto;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -52,10 +54,45 @@ public class Program {
 		try (Scanner sc = new Scanner(System.in)) {
 			System.out.print("How many employees will be registered? ");
 			int n = sc.nextInt();
+			int[] vect = new int[n];
+			int id;
+			
+			List<Employee> employees = new ArrayList<>();
+			Employee employee = new Employee();
+		
+			System.out.println();
+						
+			for (int i = 0; i < vect.length; i++) {				
+				System.out.println("Employee #" + (i + 1));
+				System.out.print("Id: ");
+				id = sc.nextInt();
+				sc.nextLine();
+				System.out.print("Name: ");
+				String name = sc.nextLine();
+				System.out.print("Salary: ");
+				double salary = sc.nextDouble();
+				
+				employee = new Employee(id, name, salary);
+				employees.add(employee);
+				System.out.println();
+			}
+			
+			System.out.print("Enter the employee id that will have salary increase: " );
+			id = sc.nextInt();
+			
+			for (Employee e : employees) {
+				if (e.getId().equals(id)) {
+					System.out.print("Enter the percentage: ");
+					double percentage = sc.nextDouble();
+					e.increaseSalary(percentage);
+				}
+			}
+			
+			// Todo Para validação de id não existente
 			
 			System.out.println();
-			
-			
+			System.out.println("List of employees:");
+			employees.forEach(System.out::println);
 		}
 	}
 }
