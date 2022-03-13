@@ -1,5 +1,7 @@
 package listas.exercicio.proposto;
 
+import static java.util.Objects.nonNull;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -73,44 +75,41 @@ public class Program {
 			System.out.print("How many employees will be registered? ");
 			int n = sc.nextInt();
 
-			int id;
 			int[] vect = new int[n];
-			boolean idNotFound = true;
 
 			List<Employee> employees = new ArrayList<>();
-			Employee employee;
 
 			System.out.println();
 
 			for (int i = 0; i < vect.length; i++) {
 				System.out.println("Employee #" + (i + 1));
 				System.out.print("Id: ");
-				id = sc.nextInt();
-				sc.nextLine();
+				int id = sc.nextInt();
+
+				while (nonNull(hasId(employees, id))) {
+					System.out.print("Id already taken. Try again: ");
+					id = sc.nextInt();
+				}
+
 				System.out.print("Name: ");
+				sc.nextLine();
 				String name = sc.nextLine();
 				System.out.print("Salary: ");
 				double salary = sc.nextDouble();
-
-				employee = new Employee(id, name, salary);
-				employees.add(employee);
+				employees.add(new Employee(id, name, salary));
 				System.out.println();
 			}
 
 			System.out.print("Enter the employee id that will have salary increase: ");
-			id = sc.nextInt();
+			int id = sc.nextInt();
 
-			for (Employee e : employees) {
-				if (e.getId().equals(id)) {
-					System.out.print("Enter the percentage: ");
-					double percentage = sc.nextDouble();
-					e.increaseSalary(percentage);
-					idNotFound = false;
-					break;
-				}
-			}
+			Employee employee = hasId(employees, id);
 
-			if (idNotFound) {
+			if (nonNull(employee)) {
+				System.out.print("Enter the percentage: ");
+				double percentage = sc.nextDouble();
+				employee.increaseSalary(percentage);
+			} else {
 				System.out.println("This id does not exist!");
 			}
 
@@ -118,5 +117,9 @@ public class Program {
 			System.out.println("List of employees:");
 			employees.forEach(System.out::println);
 		}
+	}
+
+	private static Employee hasId(List<Employee> employees, int id) {
+		return employees.stream().filter(x -> x.getId().equals(id)).findFirst().orElse(null);
 	}
 }
