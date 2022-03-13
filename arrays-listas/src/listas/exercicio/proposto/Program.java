@@ -82,9 +82,10 @@ public class Program {
 			System.out.println();
 
 			for (int i = 0; i < vect.length; i++) {
-				System.out.println("Employee #" + (i + 1));
+				System.out.println("Employee #" + (i + 1) + ":");
+
 				System.out.print("Id: ");
-				int id = sc.nextInt();
+				Integer id = sc.nextInt();
 
 				while (nonNull(hasId(employees, id))) {
 					System.out.print("Id already taken. Try again: ");
@@ -94,14 +95,16 @@ public class Program {
 				System.out.print("Name: ");
 				sc.nextLine();
 				String name = sc.nextLine();
+
 				System.out.print("Salary: ");
-				double salary = sc.nextDouble();
+				Double salary = sc.nextDouble();
+
 				employees.add(new Employee(id, name, salary));
 				System.out.println();
 			}
 
 			System.out.print("Enter the employee id that will have salary increase: ");
-			int id = sc.nextInt();
+			Integer id = sc.nextInt();
 
 			Employee employee = hasId(employees, id);
 
@@ -119,7 +122,7 @@ public class Program {
 		}
 	}
 
-	private static Employee hasId(List<Employee> employees, int id) {
+	private static Employee hasId(List<Employee> employees, Integer id) {
 		return employees.stream().filter(x -> x.getId().equals(id)).findFirst().orElse(null);
 	}
 }
