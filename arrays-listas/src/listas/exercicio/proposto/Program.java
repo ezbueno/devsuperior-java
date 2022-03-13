@@ -87,7 +87,7 @@ public class Program {
 				System.out.print("Id: ");
 				Integer id = sc.nextInt();
 
-				while (nonNull(hasId(employees, id))) {
+				while (nonNull(findById(employees, id))) {
 					System.out.print("Id already taken. Try again: ");
 					id = sc.nextInt();
 				}
@@ -106,7 +106,7 @@ public class Program {
 			System.out.print("Enter the employee id that will have salary increase: ");
 			Integer id = sc.nextInt();
 
-			Employee employee = hasId(employees, id);
+			Employee employee = findById(employees, id);
 
 			if (nonNull(employee)) {
 				System.out.print("Enter the percentage: ");
@@ -122,7 +122,7 @@ public class Program {
 		}
 	}
 
-	private static Employee hasId(List<Employee> employees, Integer id) {
+	private static Employee findById(List<Employee> employees, Integer id) {
 		return employees.stream().filter(x -> x.getId().equals(id)).findFirst().orElse(null);
 	}
 }
