@@ -66,9 +66,7 @@ public class Program {
 			System.out.print("How many contracts to this worker? ");
 			int n = sc.nextInt();
 
-			int[] vet = new int[n];
-
-			for (int i = 0; i < vet.length; i++) {
+			for (int i = 0; i < n; i++) {
 				System.out.println("Enter contract # " + (i + 1) + " data:");
 
 				System.out.print("Date (DD/MM/YYYY): ");
