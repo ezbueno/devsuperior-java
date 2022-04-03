@@ -75,7 +75,6 @@ public class Program {
 				if (outsourced == 'y') {
 					System.out.print("Additional charge: ");
 					Double additionalCharge = sc.nextDouble();
-
 					employees.add(new OutsourcedEmployee(name, hours, valuePerHour, additionalCharge));
 				} else {
 					employees.add(new Employee(name, hours, valuePerHour));
