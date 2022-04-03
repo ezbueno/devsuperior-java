@@ -1,8 +1,8 @@
-package heranca.application;
+package heranca.polimorfismo.application;
 
-import heranca.entities.Account;
-import heranca.entities.BusinessAccount;
-import heranca.entities.SavingsAccount;
+import heranca.polimorfismo.entities.Account;
+import heranca.polimorfismo.entities.BusinessAccount;
+import heranca.polimorfismo.entities.SavingsAccount;
 
 public class Program {
 	public static void main(String[] args) {
