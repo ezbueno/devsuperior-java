@@ -48,11 +48,11 @@ public class Account {
 
 	public void withdraw(Double amount) throws DomainException {
 		if (amount > this.getBalance()) {
-			throw new DomainException("Not enough balance");
+			throw new DomainException("Withdraw error: Not enough balance");
 		}
 
 		if (amount > this.getWithdrawLimit()) {
-			throw new DomainException("The amount exceeds withdraw limit");
+			throw new DomainException("Withdraw error: The amount exceeds withdraw limit");
 		}
 
 		this.balance -= amount;

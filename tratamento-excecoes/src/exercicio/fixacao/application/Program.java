@@ -69,7 +69,7 @@ public class Program {
 			account.withdraw(amount);
 			System.out.print(account);
 		} catch (DomainException e) {
-			System.out.println("Withdraw error: " + e.getMessage());
+			System.out.println(e.getMessage());
 		}
 	}
 }
