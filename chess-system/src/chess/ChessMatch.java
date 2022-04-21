@@ -70,7 +70,7 @@ public class ChessMatch {
 			throw new ChessException("You can't put yourself in check");
 		}
 		
-		this.check = (this.testCheck(this.opponent(this.currentPlayer))) ? true : false;
+		this.check = (this.testCheck(this.opponent(this.currentPlayer)));
 		
 		this.nextTurn();
 
