@@ -156,7 +156,7 @@ public class ChessMatch {
 			this.capturedPieces.remove(capturedPiece);
 			this.piecesOnTheBoard.add(capturedPiece);
 		}
-		
+
 		// special move castling king side rook
 		if (p instanceof King && target.getColumn() == source.getColumn() + 2) {
 			Position sourceT = new Position(source.getRow(), source.getColumn() + 3);
