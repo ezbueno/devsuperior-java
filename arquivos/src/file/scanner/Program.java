@@ -8,8 +8,7 @@ public class Program {
 	private static final String FILE_TXT = "C:\\Cursos\\Udemy\\DevSuperior\\arquivos\\in.txt";
 
 	public static void main(String[] args) {
-		final String path = FILE_TXT;
-		File file = new File(path);
+		File file = new File(FILE_TXT);
 
 		try (Scanner sc = new Scanner(file)) {
 			while (sc.hasNextLine()) {
