@@ -8,7 +8,7 @@ public class Program {
 	private static final String FILE_TXT = "C:\\Cursos\\Udemy\\DevSuperior\\arquivos\\in.txt";
 
 	public static void main(String[] args) {
-		try (FileReader fr = new FileReader(FILE_TXT); BufferedReader br = new BufferedReader(fr)) {
+		try (BufferedReader br = new BufferedReader(new FileReader(FILE_TXT))) {
 			String line = br.readLine();
 
 			while (line != null) {
