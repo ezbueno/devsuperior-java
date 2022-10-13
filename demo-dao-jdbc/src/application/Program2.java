@@ -30,9 +30,9 @@ public class Program2 {
 			System.out.println("Delete completed!");
 		}
 		
-//		System.out.println("\n=== TEST 4: Department findById ===");
-//		dep = departmentDao.findById(1);
-//		System.out.println(dep);
+		System.out.println("\n=== TEST 4: Department findById ===");
+		dep = departmentDao.findById(1);
+		System.out.println(dep);
 		
 		System.out.println("\n=== TEST 5: Department findAll ===");
 		List<Department> list = departmentDao.findAll();
