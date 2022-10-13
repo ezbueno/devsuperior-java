@@ -98,10 +98,7 @@ public class DepartmentDaoJDBC implements DepartmentDao {
 		ResultSet rs = null;
 		
 		try {
-			st = this.conn.prepareStatement(
-					"SELECT department.* "
-					+ "FROM department "
-					+ "WHERE department.Id = ?");
+			st = this.conn.prepareStatement("SELECT * FROM department WHERE Id = ?");
 			
 			st.setInt(1, id);
 			rs = st.executeQuery();
@@ -127,7 +124,7 @@ public class DepartmentDaoJDBC implements DepartmentDao {
 		List<Department> list = new ArrayList<>();
 		
 		try {
-			st = this.conn.prepareStatement("SELECT department.* FROM department");
+			st = this.conn.prepareStatement("SELECT * FROM department ORDER BY Name");
 			rs = st.executeQuery();
 			
 			while (rs.next()) {
