@@ -46,5 +46,4 @@ public class Pessoa implements Serializable {
 	public String toString() {
 		return "Pessoa [id=" + this.id + ", nome=" + this.nome + ", email=" + this.email + "]";
 	}
-
 }
