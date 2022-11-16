@@ -22,8 +22,8 @@ import com.buenoezandro.repositories.UserRepository;
 public class TestConfig implements CommandLineRunner {
 	private final UserRepository userRepository;
 	private final OrderRepository orderRepository;
-	private CategoryRepository categoryRepository;
-	private ProductRepository productRepository;
+	private final CategoryRepository categoryRepository;
+	private final ProductRepository productRepository;
 
 	public TestConfig(UserRepository userRepository, OrderRepository orderRepository,
 			CategoryRepository categoryRepository, ProductRepository productRepository) {
